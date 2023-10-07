@@ -1,7 +1,7 @@
 # Whisper Makefile
 
 Contains a Makefile to install whisper.
-Currently it is setup to work on windows system.
+Currently it is setup to work on windows systems only.
 
 ## Prerequisites
 
@@ -11,8 +11,8 @@ Currently it is setup to work on windows system.
 
 ### CUDA
 
-In case your system supports [cuda](https://developer.nvidia.com/cuda-downloads) you can install the latest version.
-You can check if cuda is installed by executing this command
+In case your system supports [cuda](https://developer.nvidia.com/cuda-downloads), install the drivers.
+You can check if the cuda driver are correctly installed by executing this command
 
 ```bash
 nvidia-smi

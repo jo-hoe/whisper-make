@@ -17,8 +17,12 @@ Therefore, this repo automated the installation steps using a [virtual environme
 ### CUDA
 
 In case your system supports [cuda](https://developer.nvidia.com/cuda-downloads), install the drivers.
-You can check if the cuda driver is correctly installed by executing this command
+You can check which cuda version is installed with
 
+```bash
+nvcc --version
+```
+or using
 ```bash
 nvidia-smi
 ```

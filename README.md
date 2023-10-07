@@ -1,7 +1,12 @@
 # Whisper Makefile
 
-Contains a Makefile to install whisper.
+Contains a Makefile to install [whisper](https://github.com/openai/whisper).
 Currently, it is setup to work on Windows systems only.
+
+## Motivation 
+
+The installation is straightforward, but it needs multiple commands, which are not all on a single page summarized.
+Therefore, this repo automated the installation steps using a [virtual environment](https://docs.python.org/3/library/venv.html#).
 
 ## Prerequisites
 

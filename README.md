@@ -55,11 +55,11 @@ To create subtitles for a file you simply run
 whisper <input filename or path>
 ```
 
-Run `whisper --help` for more all possible arguments.
+Run `whisper --help` to get a description of the other characters arguments.
 
 ## Notes
 
-Here are the sources for the command in case updates are needed
+Here are the sources for the Makefile commands
 
 - the plain whisper installation is documented on their [webpage](https://github.com/openai/whisper#setup)
 - the pytorch command was built using the [pytorch website](https://pytorch.org/get-started/locally/#with-cuda-1)

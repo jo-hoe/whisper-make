@@ -1,7 +1,7 @@
 # Whisper Makefile
 
 Contains a Makefile to install [whisper](https://github.com/openai/whisper).
-Currently, it is setup to work on Windows systems only.
+Currently, it is set to work on Windows systems only.
 
 ## Motivation
 
@@ -16,8 +16,8 @@ Therefore, this repo automated the installation steps using a [virtual environme
 
 ### CUDA
 
-In case your system supports [cuda](https://developer.nvidia.com/cuda-downloads), install the drivers.
-You can check which cuda version is installed with
+If your system supports [cuda](https://developer.nvidia.com/cuda-downloads), install the drivers.
+You can check which Cuda version is installed with
 
 ```bash
 nvcc --version
@@ -61,20 +61,20 @@ And this is the command for MAC and Linux:
 ```
 
 You can use the `whisper` CLI.
-To create subtitles for a file you simply run
+To create subtitles for a file you run
 
 ```powershell
 whisper <input filename or path>
 ```
 
-Run `whisper --help` to get a description of the other characters arguments.
+Run `whisper --help` to get a description of the other arguments.
 
 ### Issues
 
-Some models have an issue which results in the [subtitles going out of sync](https://github.com/openai/whisper/discussions/89).
+Some models have an issue that results in the [subtitles going out of sync](https://github.com/openai/whisper/discussions/89).
 Use the `--condition_on_previous_text False` parameter to address this issue.
 
-Here is an example with this parameter and german input video, which will be translated into english subtitles.
+Here is an example with this parameter and German input video, which will be translated into English subtitles.
 
 ```powershell
 whisper 'pathToMyGermanVideo.mp4' --language German --task translate --condition_on_previous_text False

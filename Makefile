@@ -14,7 +14,7 @@ dependencies:
 
 .PHONY: update_whisper
 update_whisper:
-	${ROOT_DIR}/.venv/Scripts/pip.exe install openai-whisper --upgrade
+	${ROOT_DIR}/.venv/Scripts/pip install openai-whisper --upgrade
 
 # installs torch for Windows systems with Cuda
 # see link below for how to install torch for other environments

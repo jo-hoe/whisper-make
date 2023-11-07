@@ -5,6 +5,10 @@ install_base:
 	@python -m venv .venv
 	./.venv/Scripts/pip.exe install -U openai-whisper
 
+.PHONY: update_whisper
+update_whisper:
+	./.venv/Scripts/pip.exe install openai-whisper --upgrade
+
 .PHONY: install
 install: install_base
 	./.venv/Scripts/pip.exe install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121

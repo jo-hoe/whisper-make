@@ -37,13 +37,13 @@ Ensure you have [make](https://gnuwin32.sourceforge.net/packages/make.htm) insta
 - for an installation with CUDA support run
 
     ```powershell
-    make
+    make install_cuda
     ```
 
 - for an installation without CUDA support run
 
     ```powershell
-    make install_base
+    make install_cpu
     ```
 
 ## How to run whisper

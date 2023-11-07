@@ -1,4 +1,4 @@
-.DEFAULT_GOAL := install
+.DEFAULT_GOAL := install-cuda
 
 ROOT_DIR := $(dir $(realpath $(lastword $(MAKEFILE_LIST))))
 
@@ -19,6 +19,10 @@ update_whisper:
 # installs torch for Windows systems with Cuda
 # see link below for how to install torch for other environments
 # https://pytorch.org/get-started/locally/
-.PHONY: install
-install: venv dependencies
+.PHONY: install-cuda
+install-cuda: venv dependencies
 	${ROOT_DIR}.venv/Scripts/pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+
+.PHONY: install-cpu
+install-cpu: venv dependencies
+	${ROOT_DIR}.venv/Scripts/pip install torch torchvision torchaudio

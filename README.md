@@ -2,11 +2,11 @@
 
 [![Test Status](https://github.com/jo-hoe/whisper-make/actions/workflows/test.yml/badge.svg)](https://github.com/jo-hoe/whisper-make/actions?workflow=test)
 
-Contains a Makefile to install [whisper](https://github.com/openai/whisper) CLI on Windows. Whisper allows you to generate and even translate subtitles for various media files.
+This repository contains a Makefile to install [whisper](https://github.com/openai/whisper) CLI on Windows. Whisper allows you to generate and even translate subtitles for various media files.
 
 ## Motivation
 
-The installation is straightforward, but it needs multiple commands, which are not all on a single page summarized for Window.
+The installation is straightforward, but it needs multiple commands, which are not all on a single page summarized for Windows.
 This repo automates the installation steps using a [virtual environment](https://docs.python.org/3/library/venv.html#).
 
 ## Prerequisites
@@ -32,7 +32,7 @@ nvidia-smi
 
 ## Installation
 
-Ensure you have [make](https://gnuwin32.sourceforge.net/packages/make.htm) installed.
+Make sure you have [make](https://gnuwin32.sourceforge.net/packages/make.htm) installed.
 
 - for an installation with CUDA support run
 
@@ -49,7 +49,7 @@ Ensure you have [make](https://gnuwin32.sourceforge.net/packages/make.htm) insta
 ## How to run whisper
 
 After activating the `.venv` environment by running.
-Here is how to do activate it on Windows:
+Here is how to activate it on Windows:
 
 ```powershell
 .\.venv\Scripts\Activate.ps1
@@ -66,7 +66,7 @@ Run `whisper --help` to get a description of the other arguments.
 
 ### Issues
 
-Some models have an issue that results in the [subtitles going out of sync](https://github.com/openai/whisper/discussions/89).
+Some models have an issue with the [subtitles going out of sync](https://github.com/openai/whisper/discussions/89).
 Use the `--condition_on_previous_text False` parameter to address this issue.
 
 Here is an example with this parameter and German input video, which will be translated into English subtitles.

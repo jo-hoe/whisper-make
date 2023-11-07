@@ -1,7 +1,6 @@
 # Whisper Makefile
 
-Contains a Makefile to install [whisper](https://github.com/openai/whisper).
-Currently, it is set to work on Windows systems only.
+Contains a Makefile to install [whisper](https://github.com/openai/whisper) on Windows.
 
 ## Motivation
 
@@ -48,16 +47,10 @@ Ensure you have [make](https://gnuwin32.sourceforge.net/packages/make.htm) insta
 ## How to run whisper
 
 After activating the `.venv` environment by running.
-Here is how to do this on Windows:
+Here is how to do activate it on Windows:
 
 ```powershell
 .\.venv\Scripts\Activate.ps1
-```
-
-And this is the command for MAC and Linux:
-
-```bash
-./.venv/Scripts/activate
 ```
 
 You can use the `whisper` CLI.

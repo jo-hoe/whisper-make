@@ -6,8 +6,8 @@ Contains a Makefile to install [whisper](https://github.com/openai/whisper) CLI 
 
 ## Motivation
 
-The installation is straightforward, but it needs multiple commands, which are not all on a single page summarized.
-Therefore, this repo automated the installation steps using a [virtual environment](https://docs.python.org/3/library/venv.html#).
+The installation is straightforward, but it needs multiple commands, which are not all on a single page summarized for Window.
+This repo automates the installation steps using a [virtual environment](https://docs.python.org/3/library/venv.html#).
 
 ## Prerequisites
 

@@ -1,14 +1,24 @@
 .DEFAULT_GOAL := install
 
-.PHONY: install_base
-install_base:
+ROOT_DIR := $(dir $(realpath $(lastword $(MAKEFILE_LIST))))
+
+# setup the virtual environment
+.PHONY: venv
+venv:
 	@python -m venv .venv
-	./.venv/Scripts/pip.exe install -U openai-whisper
+	
+# install dependecies
+.PHONY: dependencies
+dependencies:
+	${ROOT_DIR}/.venv/Scripts/pip install -U openai-whisper
 
 .PHONY: update_whisper
 update_whisper:
-	./.venv/Scripts/pip.exe install openai-whisper --upgrade
+	${ROOT_DIR}/.venv/Scripts/pip.exe install openai-whisper --upgrade
 
+# installs torch for Windows systems with Cuda
+# see link below for how to install torch for other environments
+# https://pytorch.org/get-started/locally/
 .PHONY: install
-install: install_base
-	./.venv/Scripts/pip.exe install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+install: venv dependecies
+	${ROOT_DIR}/.venv/Scripts/pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121

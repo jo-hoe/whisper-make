@@ -2,7 +2,7 @@
 
 [![Test Status](https://github.com/jo-hoe/whisper-make/actions/workflows/test.yml/badge.svg)](https://github.com/jo-hoe/whisper-make/actions?workflow=test)
 
-Contains a Makefile to install [whisper](https://github.com/openai/whisper) CLI on Windows.
+Contains a Makefile to install [whisper](https://github.com/openai/whisper) CLI on Windows. Whisper allows you to generate and even translate subtitles for various media files.
 
 ## Motivation
 

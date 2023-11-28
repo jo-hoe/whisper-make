@@ -14,6 +14,7 @@ This repo automates the installation steps using a [virtual environment](https:/
 - you have a Windows system
 - you have [python](https://www.python.org/downloads/) installed (>= version 3.10)
 - you have [ffmpeg](https://ffmpeg.org/) installed
+- you have git installed
 
 ### CUDA
 

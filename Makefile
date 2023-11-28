@@ -12,8 +12,9 @@ venv:
 dependencies:
 	${ROOT_DIR}.venv/Scripts/pip install -U openai-whisper
 
-.PHONY: update_whisper
-update_whisper:
+.PHONY: update
+update:
+	git -C ${ROOT_DIR} pull 
 	${ROOT_DIR}.venv/Scripts/pip install openai-whisper --upgrade
 
 # installs torch for Windows systems with Cuda

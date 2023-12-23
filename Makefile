@@ -1,29 +1,26 @@
+include help.mk
+
 .DEFAULT_GOAL := install-cuda
 
-ROOT_DIR := $(dir $(realpath $(lastword $(MAKEFILE_LIST))))
-
-# setup the virtual environment
 .PHONY: venv
-venv:
+venv: ## setup the virtual environment
 	@python -m venv .venv
 	
-# install dependecies
 .PHONY: dependencies
-dependencies:
-	${ROOT_DIR}.venv/Scripts/pip install -U openai-whisper
+dependencies: ## install dependecies
+	${MAKEFILE_DIR}.venv/Scripts/pip install -U openai-whisper
 
 .PHONY: update
-update:
-	git -C ${ROOT_DIR} pull 
-	${ROOT_DIR}.venv/Scripts/pip install openai-whisper --upgrade
+update: ## updates whisper
+	git -C ${MAKEFILE_DIR} pull 
+	${MAKEFILE_DIR}.venv/Scripts/pip install openai-whisper --upgrade
 
-# installs torch for Windows systems with Cuda
-# see link below for how to install torch for other environments
-# https://pytorch.org/get-started/locally/
+## see link below for how to install torch for other environments
+## https://pytorch.org/get-started/locally/
 .PHONY: install-cuda
-install-cuda: venv dependencies
-	${ROOT_DIR}.venv/Scripts/pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+install-cuda: venv dependencies ## installs torch with Cuda
+	${MAKEFILE_DIR}.venv/Scripts/pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
 
 .PHONY: install-cpu
-install-cpu: venv dependencies
-	${ROOT_DIR}.venv/Scripts/pip install torch torchvision torchaudio
+install-cpu: venv dependencies  ## installs torch for CPU
+	${MAKEFILE_DIR}.venv/Scripts/pip install torch torchvision torchaudio

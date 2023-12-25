@@ -13,7 +13,7 @@ help:
 ifeq ($(DETECT_OS),Windows)
 	@powershell -Command "& { \
 		Get-Content $(ABSOLUT_MAKEFILE_PATH) | ForEach-Object { \
-			if ($$_ -match '([a-zA-Z0-9-_]{0,}:).+##\s?(.+)') { \
+			if ($$_ -match '(^[a-zA-Z0-9-_]{0,}:).+##\s?(.+)') { \
 				'{0,-25} {1}' -f $$Matches[1], $$Matches[2] \
 			} \
 		} \

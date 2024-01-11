@@ -4,6 +4,8 @@
 
 This repository contains a Makefile to install [whisper](https://github.com/openai/whisper) CLI on Windows. Whisper allows you to generate and even translate subtitles for various media files.
 
+Alternately you can also run the whisper cli directly via docker. See [jo-hoe/whisper-docker-cli](https://github.com/jo-hoe/whisper-docker-cli) for more details.
+
 ## Motivation
 
 The installation is straightforward, but it needs multiple commands, which are not all on a single page summarized for Windows.
@@ -52,14 +54,14 @@ Make sure you have [make](https://gnuwin32.sourceforge.net/packages/make.htm) in
 After activating the `.venv` environment by running.
 Here is how to activate it on Windows:
 
-```powershell
+```PowerShell
 .\.venv\Scripts\Activate.ps1
 ```
 
 You can use the `whisper` CLI.
 To create subtitles for a file you run
 
-```powershell
+```PowerShell
 whisper <input filename or path>
 ```
 
@@ -72,7 +74,7 @@ Use the `--condition_on_previous_text False` parameter to address this issue.
 
 Here is an example with this parameter and German input video, which will be translated into English subtitles.
 
-```powershell
+```PowerShell
 whisper 'pathToMyGermanVideo.mp4' --language German --task translate --condition_on_previous_text False
 ```
 
